@@ -1,0 +1,166 @@
+{
+  "name": "vscode-4s-syntax",
+  "displayName": "4s syntax",
+  "description": "Поддержка синтаксиса формата 4s (chgksuite) в VS Code и Cursor",
+  "version": "0.1.0",
+  "publisher": "aberez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-berez/4s_syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a-berez/4s_syntax/issues"
+  },
+  "homepage": "https://github.com/a-berez/4s_syntax",
+  "main": "./extension.js",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onLanguage:4s"
+  ],
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "configurationDefaults": {
+      "[4s]": {
+        "editor.wordWrap": "on"
+      },
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": [
+              "meta.brackets.material.faded.4s",
+              "meta.brackets.note.faded.4s",
+              "meta.brackets.inline.faded.4s"
+            ],
+            "settings": {
+              "foreground": "#B3B3B3"
+            }
+          },
+          {
+            "scope": ["comment.line.meta.4s"],
+            "settings": {
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": [
+              "markup.italic.4s"
+            ],
+            "settings": {
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": [
+              "markup.bold.4s"
+            ],
+            "settings": {
+              "fontStyle": "bold"
+            }
+          },
+          {
+            "scope": [
+              "markup.underline.4s"
+            ],
+            "settings": {
+              "fontStyle": "underline"
+            }
+          },
+          {
+            "scope": [
+              "markup.bold.italic.4s"
+            ],
+            "settings": {
+              "fontStyle": "bold italic"
+            }
+          },
+          {
+            "scope": [
+              "markup.bold.underline.4s"
+            ],
+            "settings": {
+              "fontStyle": "bold underline"
+            }
+          },
+          {
+            "scope": [
+              "markup.bold.italic.underline.4s"
+            ],
+            "settings": {
+              "fontStyle": "bold italic underline"
+            }
+          }
+        ]
+      }
+    },
+    "commands": [
+      {
+        "command": "4s.wrapItalic",
+        "title": "4s: Обернуть в _курсив_"
+      },
+      {
+        "command": "4s.wrapBold",
+        "title": "4s: Обернуть в __жирный__"
+      },
+      {
+        "command": "4s.wrapUnderline",
+        "title": "4s: Обернуть в ___подчёркивание___"
+      },
+      {
+        "command": "4s.wrapBoldItalic",
+        "title": "4s: Обернуть в ____полужирный курсив____"
+      },
+      {
+        "command": "4s.wrapBoldUnderline",
+        "title": "4s: Обернуть в _____полужирный с подчёркиванием_____"
+      },
+      {
+        "command": "4s.wrapBoldItalicUnderline",
+        "title": "4s: Обернуть в ______полужирный курсив с подчёркиванием______"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "4s.wrapItalic",
+        "key": "ctrl+i",
+        "mac": "cmd+i",
+        "when": "editorTextFocus && editorLangId == 4s"
+      },
+      {
+        "command": "4s.wrapBold",
+        "key": "ctrl+b",
+        "mac": "cmd+b",
+        "when": "editorTextFocus && editorLangId == 4s"
+      },
+      {
+        "command": "4s.wrapUnderline",
+        "key": "ctrl+u",
+        "mac": "cmd+u",
+        "when": "editorTextFocus && editorLangId == 4s"
+      }
+    ],
+    "languages": [
+      {
+        "id": "4s",
+        "aliases": [
+          "4s",
+          "CHGK 4s"
+        ],
+        "extensions": [
+          ".4s"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "4s",
+        "scopeName": "source.4s",
+        "path": "./syntaxes/4s.tmLanguage.json"
+      }
+    ]
+  }
+}
