@@ -2,7 +2,7 @@
   "name": "vscode-4s-syntax",
   "displayName": "4s syntax",
   "description": "Поддержка синтаксиса формата 4s (chgksuite) в VS Code и Cursor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "aberez",
   "repository": {
     "type": "git",
@@ -127,19 +127,37 @@
         "command": "4s.wrapItalic",
         "key": "ctrl+i",
         "mac": "cmd+i",
-        "when": "editorTextFocus && editorLangId == 4s"
+        "when": "editorTextFocus && editorLangId == '4s'"
+      },
+      {
+        "command": "4s.wrapItalic",
+        "key": "ctrl+alt+i",
+        "mac": "cmd+alt+i",
+        "when": "editorTextFocus && editorLangId == '4s'"
       },
       {
         "command": "4s.wrapBold",
         "key": "ctrl+b",
         "mac": "cmd+b",
-        "when": "editorTextFocus && editorLangId == 4s"
+        "when": "editorTextFocus && editorLangId == '4s'"
+      },
+      {
+        "command": "4s.wrapBold",
+        "key": "ctrl+alt+b",
+        "mac": "cmd+alt+b",
+        "when": "editorTextFocus && editorLangId == '4s'"
       },
       {
         "command": "4s.wrapUnderline",
         "key": "ctrl+u",
         "mac": "cmd+u",
-        "when": "editorTextFocus && editorLangId == 4s"
+        "when": "editorTextFocus && editorLangId == '4s'"
+      },
+      {
+        "command": "4s.wrapUnderline",
+        "key": "ctrl+alt+u",
+        "mac": "cmd+alt+u",
+        "when": "editorTextFocus && editorLangId == '4s'"
       }
     ],
     "languages": [
